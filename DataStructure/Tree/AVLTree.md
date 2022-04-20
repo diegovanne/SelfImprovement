@@ -27,7 +27,6 @@
 + It is a tree to store string.
 + The maximum number of children of a node is equal to the size of the alphabet.
 + Each node inside of Trie will have the possibility to have up to 26 children where each child is in individual lowercase letters.
-+ Trie supports search, insert and delete operations in O(L) time where L is the length of the key.
 + There are various applications of this very efficient data structure such as:
 
 ## Autocomplete
@@ -37,6 +36,18 @@
 ## Spell checker
 
 ![](../Images/spellchecker.png)
+
+## 6. Why use Trie?
+
++ There are several other data structures, like balanced trees and hash tables, which give us the possibility to search for a word in a dataset of strings.
++ But why do we need trie?
++ Although hash table has O(1)O(1) time complexity for looking for a key, it is not efficient in the following operations:
+    - Finding all keys with a common prefix.
+    - Enumerating a dataset of strings in lexicographical order.
++ Another reason why trie outperforms hash table, is that as hash table increases in size, there are lots of hash collisions and the search time complexity could deteriorate to O(n), where n is the number of keys inserted.
++ Trie could use less space compared to Hash Table when storing many keys with the same prefix.
++ In this case using trie has only O(m) time complexity, where m is the key length.
++ Searching for a key in a balanced tree costs O(mlogn) time complexity.
 
 ## 5. Implementation of Trie?
 
