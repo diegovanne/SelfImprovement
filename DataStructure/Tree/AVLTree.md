@@ -19,7 +19,7 @@
 
 ![](../Images/trie-dictionary.PNG)
 
-+ We can see that there are any words starting with CAR. There is also CARD, CARDS, etc.
++ We can see that there are any words starting with **CAR**. There is also **CARD**, **CARDS**, etc.
 + So CAR is also a prefix and it allows you to do a very fast lookups.
 
 ## 4. Application of Trie?
@@ -41,17 +41,17 @@
 
 + There are several other data structures, like balanced trees and hash tables, which give us the possibility to search for a word in a dataset of strings.
 + But why do we need trie?
-+ Although hash table has O(1)O(1) time complexity for looking for a key, it is not efficient in the following operations:
++ Although hash table has **O(1)** time complexity for looking for a key, it is not efficient in the following operations:
     - Finding all keys with a common prefix.
     - Enumerating a dataset of strings in lexicographical order.
-+ Another reason why trie outperforms hash table, is that as hash table increases in size, there are lots of hash collisions and the search time complexity could deteriorate to O(n), where n is the number of keys inserted.
++ Another reason why trie outperforms hash table, is that as hash table increases in size, there are lots of hash collisions and the search time complexity could deteriorate to **O(n)**, where n is the number of keys inserted.
 + Trie could use less space compared to Hash Table when storing many keys with the same prefix.
-+ In this case using trie has only O(m) time complexity, where m is the key length.
-+ Searching for a key in a balanced tree costs O(mlogn) time complexity.
++ In this case using trie has only **O(m)** time complexity, where m is the key length.
++ Searching for a key in a balanced tree costs **O(mlogn)** time complexity.
 
-## 5. Implementation of Trie?
+## 7. Implementation of Trie?
 
-+ First we need a class Node
++ First we need a class **Node**
 + Instead of having as we would in a binary search tree which is a pointer to the left and right node, we need a lookup table that maps from a character to that node.
 + It means that every single node is going to be pointing to up to 26 different other nodes
 + Additionally, we need to know that the word is actually a complete word or a prefix word.
