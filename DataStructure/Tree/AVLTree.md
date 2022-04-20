@@ -1,10 +1,10 @@
-1. What is Trie?
+## 1. What is Trie?
 
 + Trie is a data structure that is actually a type of tree 
 + It is where the nodes store letters inside of the alphabet.
 + These nodes can be connected together.
 
-2. How Trie works?
+## 2. How Trie works?
 
 + Each node of Trie contains character as its data.
 
@@ -13,7 +13,7 @@
 + If we look at the path from the root (example node T) down as the precede image, you will see that a part of word or a word can be formed in a path of Trie (example node E to form TRIE).
 + So it allows us to do a very quick lookups of particular words.
 
-3. Example of Trie?
+## 3. Example of Trie?
 
 + Example, we could use Trie to store a very small version of English language.
 
@@ -22,7 +22,7 @@
 + We can see that there are any words starting with CAR. There is also CARD, CARDS, etc.
 + So CAR is also a prefix and it allows you to do a very fast lookups.
 
-4. Application of Trie?
+## 4. Application of Trie?
 
 + It is a tree to store string.
 + The maximum number of children of a node is equal to the size of the alphabet.
@@ -38,7 +38,7 @@
 
 ![](../Images/spellchecker.png)
 
-5. Implementation of Trie?
+## 5. Implementation of Trie?
 
 + First we need a class Node
 + Instead of having as we would in a binary search tree which is a pointer to the left and right node, we need a lookup table that maps from a character to that node.
