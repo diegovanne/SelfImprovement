@@ -1,7 +1,8 @@
 1. What is Trie?
 
-+ Trie is a data structure that is actually a type of tree.
-+ It is often used to store characters.
++ Trie is a data structure that is actually a type of tree 
++ It is where the nodes store letters inside of the alphabet.
++ These nodes can be connected together.
 
 2. How Trie works?
 
@@ -25,19 +26,36 @@
 
 + It is a tree to store string.
 + The maximum number of children of a node is equal to the size of the alphabet.
++ Each node inside of Trie will have the possibility to have up to 26 children where each child is in individual lowercase letters.
 + Trie supports search, insert and delete operations in O(L) time where L is the length of the key.
++ There are various applications of this very efficient data structure such as:
+
+## Autocomplete
+
+![](../Images/autocomplete.png)
+
+## Spell checker
+
+![](../Images/spellchecker.png)
 
 5. Implementation of Trie?
 
 + First we need a class Node
 + Instead of having as we would in a binary search tree which is a pointer to the left and right node, we need a lookup table that maps from a character to that node.
++ It means that every single node is going to be pointing to up to 26 different other nodes
 + Additionally, we need to know that the word is actually a complete word or a prefix word.
++ So each node has a flag to do the check that if it is a complete word or a prefix one.
 
 ```c#
     public class Node { 
-        private HashMap<character, Node> children;
+        private char c;
         private bool isCompletedWord;
+        public Node[] children;
+
+        public Node(char c){
+            this.c = c;
+            isCompletedWord = false;
+            children = new Node[26];
+        }
     }
 ```
-
-+ So each node has a flag to do the check that if it is a complete word or a prefix one.
